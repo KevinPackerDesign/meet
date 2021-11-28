@@ -1,0 +1,71 @@
+This app will be for finding events by location. 
+You will be able to filter the event list by city.
+You will be able to adjust how many events will be listed. 
+It will show and hide extra information about events.
+It will have charts showing the number of upcoming events by city.
+It will be serverless. 
+It will be a PWA for instant loading, offline support and push notifications.
+It will have an "add to home screen prompt
+It will be cross-platform compatible
+
+I will be developing this with TDD and BDD in mind. 
+This will be a React application
+The app will use Google Calendar API and OAuth2 for authentication flow.
+It will work on the latest versions of: Chrome, Firefox, Safari, Edge, Opera, IE11.
+It will work on all screen sizes.
+
+
+
+FEATURE 2: SHOW/HIDE AN EVENT'S DETAILS
+Scenario 1: An event element is collapsed by default
+
+Given user hasn’t selected an event 
+When the user opens event lists
+Then the user should see a list of events with/without city filter
+
+Scenario 2: User can expand an event to see its details
+
+Given user finds an event they are interested in
+When user clicks/taps on event
+Then the user will see more information on the event
+
+Scenario 3: User can collapse an event to hide its details
+
+Given user is done reading information on chosen event
+When user clicks/taps on event again
+Then the user will see just the event list again.
+
+
+
+FEATURE 3: SPECIFY NUMBER OF EVENTS
+Scenario 1: When user hasn’t specified a number, 32 is the default number
+
+Given user hasn’t specified the number of events to view
+When user opens event list
+Then the user will see 32 events as default
+
+Scenario 2: User can change the number of events they want to see
+
+Given the user selects a number for amount of events to show
+When user clicks/taps on event list filter
+Then the user should see a shortened/lengthened list of events.
+
+FEATURE 4: USE THE APP WHEN OFFLINE
+Scenario 1: Show cached data when there’s no internet connection
+
+Given user opens app
+When user is without internet connection
+Then the user will see events stored in cached data
+
+Scenario 2: Show error when user changes the settings (city, time range)
+
+Given user views list of events without internet
+When the user tries to filter data not already cached
+Then error shows 
+
+FEATURE 5: DATA VISUALIZATION
+Scenario 1: Show a chart with the number of upcoming events in each city
+
+Given list of events are shown to the user
+When the user opens app and filters to a city of there choice
+Then a list of events in chosen city is displayed on their screen
