@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/eventlistKPD/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/eventlistKPD/static/js/main.dff06d89.chunk.js",
+    "main.js.map": "/eventlistKPD/static/js/main.dff06d89.chunk.js.map",
+    "runtime-main.js": "/eventlistKPD/static/js/runtime-main.b1eb8975.js",
+    "runtime-main.js.map": "/eventlistKPD/static/js/runtime-main.b1eb8975.js.map",
+    "static/js/2.9df8e2a7.chunk.js": "/eventlistKPD/static/js/2.9df8e2a7.chunk.js",
+    "static/js/2.9df8e2a7.chunk.js.map": "/eventlistKPD/static/js/2.9df8e2a7.chunk.js.map",
+    "static/js/3.ee38389b.chunk.js": "/eventlistKPD/static/js/3.ee38389b.chunk.js",
+    "static/js/3.ee38389b.chunk.js.map": "/eventlistKPD/static/js/3.ee38389b.chunk.js.map",
+    "index.html": "/eventlistKPD/index.html",
+    "service-worker.js": "/eventlistKPD/service-worker.js",
+    "service-worker.js.map": "/eventlistKPD/service-worker.js.map",
+    "static/css/main.8c8b27cf.chunk.css.map": "/eventlistKPD/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.9df8e2a7.chunk.js.LICENSE.txt": "/eventlistKPD/static/js/2.9df8e2a7.chunk.js.LICENSE.txt",
+    "static/media/logo.103b5fa1.svg": "/eventlistKPD/static/media/logo.103b5fa1.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b1eb8975.js",
+    "static/js/2.9df8e2a7.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.dff06d89.chunk.js"
+  ]
+}
