@@ -15,6 +15,10 @@ describe("<CitySearch /> component", () => {
     expect(CitySearchWrapper.find(".city")).toHaveLength(1);
   });
 
+  test("Check inital state", () => {
+    expect(CitySearchWrapper.state("query")).toBe("");
+  });
+
   test("renders a list of sugestions", () => {
     expect(CitySearchWrapper.find(".suggestions")).toHaveLength(1);
   });

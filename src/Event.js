@@ -25,13 +25,13 @@ class Event extends Component {
         {this.state.collapsed === false && (
           <p className="description">{event.description}</p>
         )}
-        {this.state.collapsed == true && (
-          <button id="infoButton" onClick={this.handleClick}>
+        {this.state.collapsed === true && (
+          <button className="infoButton" onClick={this.handleClick}>
             More Info
           </button>
         )}
-        {this.state.collapsed == false && (
-          <button id="infoButton" onClick={this.handleClick}>
+        {this.state.collapsed === false && (
+          <button className="infoButton" onClick={this.handleClick}>
             Close Info
           </button>
         )}

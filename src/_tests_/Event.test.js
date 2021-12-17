@@ -20,10 +20,6 @@ describe("<Event /> component", () => {
     expect(EventInfoWrapper.find(".summary")).toHaveLength(1);
   });
 
-  test("render event description", () => {
-    expect(EventInfoWrapper.find(".description")).toHaveLength(1);
-  });
-
   test("render event start time", () => {
     expect(EventInfoWrapper.find(".start")).toHaveLength(1);
   });
@@ -32,10 +28,26 @@ describe("<Event /> component", () => {
     expect(EventInfoWrapper.find(".end")).toHaveLength(1);
   });
 
-  //Part two of part one test cases to check if extra info is shown when a user clicks on "Details"
+  // Part two of part one test cases to check if extra info is shown when a user clicks on "Details"
   test("clicking the details button to show more information", () => {
     EventInfoWrapper.setState({
       collapsed: true,
+    });
+    EventInfoWrapper.find(".infoButton").simulate("click");
+    expect(EventInfoWrapper.state("collapsed")).toBe(false);
+  });
+
+  test("render event description", () => {
+    EventInfoWrapper.setState({
+      collapsed: true,
+    });
+    EventInfoWrapper.find(".infoButton").simulate("click");
+    expect(EventInfoWrapper.find(".description")).toHaveLength(1);
+  });
+
+  test("clicking the details button to show less information", () => {
+    EventInfoWrapper.setState({
+      collapsed: false,
     });
     EventInfoWrapper.find(".infoButton").simulate("click");
     expect(EventInfoWrapper.state("collapsed")).toBe(true);
