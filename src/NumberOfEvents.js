@@ -9,8 +9,10 @@ class NumberOfEvents extends Component {
     const number = event.target.value;
 
     this.setState({
-      newEventsTotal: number,
+      EventsTotal: number,
     });
+
+    this.props.updateTotal(EventsTotal);
   };
 
   render() {
