@@ -83,11 +83,14 @@ describe("<App /> integration", () => {
 
   test('Checks to see if the number of events changes"', async () => {
     const AppWrapper = mount(<App />);
-    const EventNumber = AppWrapper.find(NumberOfEvents);
+    const EventNumberWrapper = AppWrapper.find(NumberOfEvents);
     const number = { target: { value: 10 } };
-    EventNumber.find("input").simulate("change", number);
+    await EventNumberWrapper.find("input").simulate("change", number);
+    const newNumber = EventNumberWrapper.state().EventsTotal;
+    expect(newNumber).toBe(10);
     AppWrapper.update();
-    expect(AppWrapper.state("numberOfEvents")).toEqual(10);
+    expect(AppWrapper.state("numberOfEvents")).toHaveLength(newNumber);
+    expect(AppWrapper.find(".Event")).toHaveLength(10);
     AppWrapper.unmount();
   });
 });
