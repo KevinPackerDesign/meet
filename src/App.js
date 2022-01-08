@@ -12,12 +12,14 @@ class App extends Component {
     events: [],
     locations: [],
     numberOfEvents: 32,
+    currentLocation: "all",
   };
 
   componentDidMount() {
     this.mounted = true;
     getEvents().then((events) => {
       if (this.mounted) {
+        events.slice(0, this.state.numberOfEvents);
         this.setState({ events, locations: extractLocations(events) });
       }
     });
@@ -27,29 +29,29 @@ class App extends Component {
     this.mounted = false;
   }
 
-  updateEvents = (location, numberOfEvents) => {
+  updateEvents = async (location, numberOfEvents) => {
     getEvents().then((events) => {
       const locationEvents =
         location === "all"
           ? events
           : events.filter((event) => event.location === location);
 
-      const visibleEvents = locationEvents.slice(0, numberOfEvents);
+      // const visibleEvents = locationEvents.slice(0, numberOfEvents);
       if (this.mounted) {
         this.setState({
-          events: locationEvents,
-          numberOfEvents: visibleEvents,
+          events: locationEvents.slice(0, numberOfEvents),
+          currentLocation: location,
         });
       }
     });
   };
 
-  updateTotal = (eventCount) => {
+  updateTotal = async (eventCount) => {
     this.setState({
       numberOfEvents: eventCount,
     });
     console.log(eventCount, "from app");
-    this.updateEvents(eventCount);
+    this.updateEvents(this.state.currentLocation, this.state.numberOfEvents);
   };
 
   render() {
