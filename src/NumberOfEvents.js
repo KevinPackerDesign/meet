@@ -12,7 +12,8 @@ class NumberOfEvents extends Component {
       EventsTotal: number,
     });
 
-    this.props.updateTotal(number);
+    this.props.updateTotal(null, number);
+    console.log(number);
   };
 
   render() {
