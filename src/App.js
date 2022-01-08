@@ -19,8 +19,10 @@ class App extends Component {
     this.mounted = true;
     getEvents().then((events) => {
       if (this.mounted) {
-        events.slice(0, this.state.numberOfEvents);
-        this.setState({ events, locations: extractLocations(events) });
+        this.setState({
+          events: events.slice(0, this.state.numberOfEvents),
+          locations: extractLocations(events),
+        });
       }
     });
   }
@@ -39,7 +41,7 @@ class App extends Component {
       // const visibleEvents = locationEvents.slice(0, numberOfEvents);
       if (this.mounted) {
         this.setState({
-          events: locationEvents.slice(0, numberOfEvents),
+          events: locationEvents.slice(0, this.state.numberOfEvents),
           currentLocation: location,
         });
       }
