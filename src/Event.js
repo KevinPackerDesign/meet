@@ -17,7 +17,7 @@ class Event extends Component {
     const { event } = this.props;
 
     return (
-      <div>
+      <div className="event">
         <div className="status">{event.status}</div>
         <div className="summary">{event.summary}</div>
         <div className="start">{event.start.dateTime}</div>

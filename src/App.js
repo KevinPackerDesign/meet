@@ -31,14 +31,13 @@ class App extends Component {
     this.mounted = false;
   }
 
-  updateEvents = async (location, numberOfEvents) => {
+  updateEvents = async (location) => {
     getEvents().then((events) => {
       const locationEvents =
         location === "all"
           ? events
           : events.filter((event) => event.location === location);
 
-      // const visibleEvents = locationEvents.slice(0, numberOfEvents);
       if (this.mounted) {
         this.setState({
           events: locationEvents.slice(0, this.state.numberOfEvents),
