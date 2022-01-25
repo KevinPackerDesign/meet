@@ -43,8 +43,8 @@ export const getEvents = async () => {
   }
   if (!navigator.onLine) {
     const data = localStorage.getItem("lastEvents");
-    NProgress.dont();
-    return data ? JSON.parse(events).evetns : [];
+    NProgress.done();
+    return data ? JSON.parse(data).events : [];
   }
   const token = await getAccessToken();
 

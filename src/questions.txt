@@ -1,0 +1,8 @@
+What was your role for this project and what tasks did you face?
+	My role was as the developer of the app. I wrote the code using react, I also wrote the tests for TDD BDD and End-to-End. The last part was to add the graphs.
+What decisions did you take and why? What were the consequences?
+	I followed the course and as such there were no consequences.
+If you could, what would you do differently?
+	I would spend a bit more time working on the style of the page. I would also included more information about the events as well as change the way the times are displayed.
+What lessons did you learn during this project?
+	React is a very useful tool. Workin with it showed me that there are many different ways of reaching a goal.
