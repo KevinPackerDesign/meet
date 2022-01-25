@@ -118,6 +118,7 @@ input[type="number"] {
   width: 200px;
   margin: 60px;
   text-align: center;
+  margin: 100px auto;
 }
 
 .button-wrapper {
@@ -130,7 +131,9 @@ input[type="number"] {
 
 .Alert {
   position: fixed;
-  top: 20px;
+  margin: 0 auto;
+  top: 60px;
+  left: 475px;
 }
 
 .data-vis-wrapper {
